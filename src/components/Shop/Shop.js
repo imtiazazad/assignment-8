@@ -13,7 +13,21 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
 
-
+    const addToCart = (product) =>{
+        
+        if(cart.length < 4) {
+            const exist = cart.find( (products)=> (products.id) === product.id)
+            if(!exist){
+                const newCart = [...cart, product];
+                setCart(newCart)
+            }
+        }
+        else{
+               alert('you cant add more than 4 items')
+        }
+        
+       }
+       
     return (
         <div className='shop-container'>
             <div className="products-container">
@@ -21,7 +35,7 @@ const Shop = () => {
                     products.map(product => <Product 
                         key={product.id}
                         product={product}
-                        // handleAddToCart={handleAddToCart}
+                        addToCart={addToCart}
                         ></Product>)
                 }
             </div>
