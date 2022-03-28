@@ -52,7 +52,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart  cart={cart} random={random} allreset={allreset} ></Cart>
+                <Cart  key={cart.id} cart={cart} random={random} randomCart={randomCart} allreset={allreset} ></Cart>
             </div>
         </div>
     );

@@ -1,7 +1,8 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = ({cart, allreset, random}) => {
+const Cart = ({cart, allreset, random, randomCart}) => {
+    console.log(randomCart);
     
     return (
         <div>
@@ -13,7 +14,8 @@ const Cart = ({cart, allreset, random}) => {
                 ) )
             }
             <div>
-            <button onClick={random}>Choose 1 for me </button>
+                <h1>Random Product: {randomCart.name}</h1>
+            <button onClick={()=>random(cart)}>Choose 1 for me </button>
             <button onClick={allreset} >Choose Again </button>
             </div>
         </div>
