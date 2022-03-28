@@ -15,7 +15,10 @@ const Cart = (props) => {
                     </div>
                 ) )
             }
-            
+            <div>
+            <button>Choose 1 for me </button>
+            <button>Choose Again </button>
+            </div>
         </div>
     );
 };
